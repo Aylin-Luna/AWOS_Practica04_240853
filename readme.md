@@ -176,7 +176,7 @@ Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 | 4 | Registro de aplicaciones y obtención de API keys | ✅ Completado |
 | 5 | Implementación de estrategias Passport | ✅ Completado |
 | 6 | Creación de vistas con Tailwind | ✅ Completado |
-| 7 | Página de perfil y consumo de APIs | ⏳ Pendiente |
+| 7 | Página de perfil y consumo de APIs | ✅ Completado |
 | 8 | Pruebas y documentación final | ⏳ Pendiente |
 
 ## 📱 Funcionalidades
