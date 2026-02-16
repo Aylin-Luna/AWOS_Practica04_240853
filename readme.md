@@ -172,7 +172,7 @@ Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 |------|-------------|---------|
 | 1 | Configuración inicial del proyecto | ✅ Completado |
 | 2 | Configuración de Tailwind CSS 4.x | ✅ Completado |
-| 3 | Servidor Express y configuración de sesiones | ⏳ Pendiente |
+| 3 | Servidor Express y configuración de sesiones | ✅ Completado |
 | 4 | Registro de aplicaciones y obtención de API keys | ⏳ Pendiente |
 | 5 | Implementación de estrategias Passport | ⏳ Pendiente |
 | 6 | Creación de vistas con Tailwind | ⏳ Pendiente |
