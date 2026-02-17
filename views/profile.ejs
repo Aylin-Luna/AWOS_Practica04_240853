@@ -8,11 +8,11 @@
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen p-4">
     <div class="max-w-6xl mx-auto">
-        <!-- Header -->
+        <!-- Header con enlace simple a /logout -->
         <div class="flex justify-between items-center mb-8">
             <h1 class="text-3xl font-bold text-gray-800">Dashboard</h1>
             <a href="/logout" 
-               class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-xl font-semibold transition duration-300">
+               class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-xl font-semibold transition duration-300 inline-block">
                 Cerrar Sesión
             </a>
         </div>
@@ -43,8 +43,8 @@
                         Autenticado con 
                         <span class="font-semibold 
                             <%= user.provider === 'google' ? 'text-google' : '' %>
+                            <%= user.provider === 'spotify' ? 'text-spotify' : '' %>
                             <%= user.provider === 'linkedin' ? 'text-linkedin' : '' %>
-                            <%= user.provider === 'twitter' ? 'text-twitter' : '' %>
                             <%= user.provider === 'github' ? 'text-github' : '' %>
                             <%= user.provider === 'discord' ? 'text-discord' : '' %>">
                             <%= user.provider ? user.provider.charAt(0).toUpperCase() + user.provider.slice(1) : 'Red Social' %>
@@ -76,7 +76,6 @@
             <h3 class="text-2xl font-bold text-gray-800 mb-6">Contenido de <%= user.provider %></h3>
             
             <div id="api-content" class="space-y-6">
-                <!-- Contenido dinámico cargado según la red social -->
                 <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
@@ -129,6 +128,19 @@
                 </div>
                 <% } %>
 
+                <% if (user.provider === 'spotify') { %>
+                <div class="bg-spotify text-white p-6 rounded-xl">
+                    <h4 class="font-bold text-lg mb-3">Ejemplo para Spotify:</h4>
+                    <p>Podrías consumir la API de Spotify para mostrar:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>Artistas más escuchados</li>
+                        <li>Playlists del usuario</li>
+                        <li>Canciones recientes</li>
+                        <li>Tipo de cuenta (Free/Premium)</li>
+                    </ul>
+                </div>
+                <% } %>
+
                 <% if (user.provider === 'linkedin') { %>
                 <div class="bg-linkedin text-white p-6 rounded-xl">
                     <h4 class="font-bold text-lg mb-3">Ejemplo para LinkedIn:</h4>
@@ -138,19 +150,6 @@
                         <li>Educación</li>
                         <li>Habilidades</li>
                         <li>Conexiones recientes</li>
-                    </ul>
-                </div>
-                <% } %>
-
-                <% if (user.provider === 'twitter') { %>
-                <div class="bg-twitter text-white p-6 rounded-xl">
-                    <h4 class="font-bold text-lg mb-3">Ejemplo para Twitter:</h4>
-                    <p>Podrías consumir la API de Twitter para mostrar:</p>
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
-                        <li>Tweets recientes</li>
-                        <li>Seguidores y seguidos</li>
-                        <li>Tendencias</li>
-                        <li>Menciones</li>
                     </ul>
                 </div>
                 <% } %>
@@ -181,8 +180,8 @@
         <!-- Información técnica -->
         <div class="mt-8 text-center text-gray-500 text-sm">
             <p>Token de acceso disponible en el servidor. Revisa la documentación de cada API para más endpoints.</p>
-            <p class="mt-1">Instituto Tecnológico Superior de Xalapa</p>
-            <p class="mt-1">Aylin Esteban Luna - No. Control: 240853</p>
+            <p class="mt-1">Universidad Tecnológica de Xicotepec de Juárez</p>
+            <p class="mt-1">Aylin Esteban Luna - Matrícula: 240853</p>
         </div>
     </div>
 
@@ -199,7 +198,6 @@
         `;
         apiContent.appendChild(loadingMsg);
         
-        // Simulación de consumo de API
         setTimeout(() => {
             loadingMsg.remove();
             const newContent = document.createElement('div');
