@@ -137,3 +137,22 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# ============================================
+# ESPECÍFICOS PARA ESTA PRÁCTICA
+# ============================================
+
+# Archivos del sistema (Windows/macOS)
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de compilación de Tailwind
+public/css/*.css
+!public/css/output.css
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swo
+*.swp

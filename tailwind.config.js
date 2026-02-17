@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        facebook: '#1877F2',
-        linkedin: '#0A66C2',
-        twitter: '#1DA1F2',
-        github: '#333333',
-        discord: '#5865F2'
+        google: '#1877F2',      // Azul de Google (puedes ajustar)
+        spotify: '#1DB954',      // Verde oficial de Spotify
+        linkedin: '#0A66C2',     // Azul de LinkedIn
+        github: '#333333',       // Gris oscuro de GitHub
+        discord: '#5865F2'       // Azul/púrpura de Discord
       }
     },
   },
