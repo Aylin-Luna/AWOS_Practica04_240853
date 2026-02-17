@@ -154,12 +154,6 @@ Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 3. Homepage URL: `http://localhost:3000`
 4. Authorization callback URL: `http://localhost:3000/auth/github/callback`
 
-### Twitter (X)
-1. Visitar [Twitter Developer Portal](https://developer.twitter.com/)
-2. Crear proyecto → "Create App"
-3. Configurar callback URL: `http://localhost:3000/auth/twitter/callback`
-4. Solicitar acceso a API v2 (nivel gratuito Essential)
-
 ### Discord
 1. Ir a [Discord Developer Portal](https://discord.com/developers/applications)
 2. "New Application"
